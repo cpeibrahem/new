@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="ibm.css" rel="stylesheet" type="text/css">
+</head>
+
+    
+<body>
+    <div id="audio-player-container">
+        <p>المحركات</p>
+        <input type="range" id="seek-slider" max="100" value="0">
+        <span id="duration" class="time">المحرك 1</span>
+        <output id="volume-output">المحرك 2</output>
+        <input type="range" id="volume-slider" max="100" value="100">
+        <input type="range" id="seek-slider" max="100" value="0">
+        <span id="duration" class="time">المحرك 3</span>
+        <output id="volume-output">المحرك 4</output>
+        <input type="range" id="volume-slider" max="100" value="100">
+        <input type="range" id="seek-slider" max="100" value="0">
+        <span id="duration" class="time">المحرك 5</span>
+        <output id="volume-output">المحرك 6</output>
+        <input type="range" id="volume-slider" max="100" value="100">
+        <button class="button button1" type="button" onclick="alert('تم الحفظ')">حفظ</button>
+        <button class="button button2" type="button" onclick="alert('تم التشغيل')">تشغيل</button>
+
+      </div>
+
+</script>
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "b40d7f8c-4bf9-4cf7-92d2-b1543d0d3be9", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "d2e5564f-e435-4a42-b012-7d41d4cd78b3", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+  <script src="ibm.js"></script>
+</body>
+</html>
